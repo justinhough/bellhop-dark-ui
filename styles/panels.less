@@ -1,0 +1,121 @@
+@import "ui-mixins";
+@import "ui-variables";
+@import "buttons";
+
+.panel {
+  &.bordered {
+    border: 1px solid @base-border-color;
+    border-radius: @component-border-radius;
+  }
+}
+.panels-item {
+  .section {
+    background: lighten(@main-theme-color, 5%);
+  }
+}
+
+atom-panel, .tool-panel {
+  .text(normal);
+  position: relative;
+
+  background-color: @tool-panel-background-color;
+
+  &.bottom, &.panel-bottom {
+    border-top: 1px solid @tool-panel-border-color;
+    box-shadow: inset 0 1px 0 @background-color-highlight;
+  }
+
+  &.left, &.panel-left {
+    border-right: 1px solid @tool-panel-border-color;
+  }
+
+  &.right, &.panel-right {
+    border-left: 1px solid @tool-panel-border-color;
+  }
+}
+
+.inset-panel {
+  position: relative;
+  background-color: @inset-panel-background-color;
+}
+
+.is-blurred {
+  atom-panel,
+  .inset-panel {
+  }
+}
+
+.panel-heading {
+  .text(normal);
+
+  border-bottom: 1px solid @panel-heading-border-color;
+  border-top: 1px solid fadein(@background-color-highlight, 10%);
+
+  background-color: transparent;
+  background-image: -webkit-linear-gradient(@panel-heading-background-color, darken(@panel-heading-background-color, 10%));
+
+  .btn {
+    padding-left: 8px;
+    padding-right: 8px;
+
+    @bg: lighten(@button-background-color, 10%);
+    @hover: lighten(@button-background-color-hover, 10%);
+    @selected: lighten(@button-background-color-selected, 10%);
+    @text: lighten(@text-color, 10%);
+    .btn-background(@bg, @hover, @selected, @text);
+  }
+}
+
+// Settings View
+.settings-view {
+
+  .checkbox {
+    .setting-title {
+      color: #FFF;
+    }
+  }
+  .setting-title {
+    color: #FFF;
+  }
+  .setting-description {
+    color: lighten(@main-theme-color, 40%);
+  }
+
+  input[type="checkbox"] {
+    background: lighten(@main-theme-color, 20%);
+    &:checked {
+      background: darken(@main-theme-color, 5%);
+      &:before,
+      &:after {
+        background-color: #FFF;
+      }
+    }
+  }
+
+  .package-card {
+    background-color: lighten(@main-theme-color, 20%);
+    &:hover {
+      background-color: lighten(@main-theme-color, 30%);
+    }
+
+    .card-name {
+      a {
+        color: darken(@main-theme-color, 10%);
+      }
+    }
+    .meta-user .author {
+      color: lighten(@main-theme-color, 50%);
+    }
+    .package-description {
+      color: #FFF;
+    }
+    .stats .stats-item,
+    .stats .stats-item .icon {
+      color: #FFF;
+    }
+  }
+
+  .text {
+    color: #FFF;
+  }
+}
