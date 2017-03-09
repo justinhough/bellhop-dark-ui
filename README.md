@@ -1,4 +1,4 @@
-# Bellop Dark UI theme
+# Bellhop Dark UI theme
 
 A custom dark UI theme for Atom.
 
