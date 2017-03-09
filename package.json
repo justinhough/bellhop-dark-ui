@@ -1,7 +1,7 @@
 {
   "name": "bellhop-dark-ui",
   "theme": "ui",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A custom theme dark blue UI theme for Atom.",
   "license": "MIT",
   "repository": "https://github.com/room316studios/bellhop-dark-ui",
